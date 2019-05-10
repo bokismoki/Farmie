@@ -1,0 +1,945 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
+  max-width: 1663px;
+}
+
+.container {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.arrowUp {
+  position: fixed;
+  bottom: 20px;
+  right: 50px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+// HEADER
+.headerWelcome {
+  background-color: #f2f4f5;
+  font-size: 0.75em;
+  padding: 1em 0;
+  color: #707070;
+
+  & .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  span {
+    color: #77b122;
+  }
+
+  i:first-child {
+    cursor: pointer;
+    transition: color 250ms;
+    position: relative;
+
+    &:hover {
+      color: #77b122;
+
+      &::after {
+        position: absolute;
+        display: flex;
+        content: "infodeercreative@gmail.com";
+        background-color: #000;
+        color: #fff;
+        width: 100%;
+        height: 200%;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        top: 150%;
+        font-size: 1.1em;
+      }
+    }
+  }
+
+  i:nth-child(2) {
+    margin-left: 1em;
+    cursor: pointer;
+    position: relative;
+    transition: color 250ms;
+
+    &:hover {
+      color: #77b122;
+
+      &::after {
+        position: absolute;
+        display: flex;
+        content: "+84 223 9000";
+        background-color: #000;
+        color: #fff;
+        width: 100%;
+        height: 200%;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        top: 150%;
+        font-size: 1.1em;
+      }
+    }
+  }
+}
+
+.headerMain {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.8em 0;
+
+  ul {
+    list-style-type: none;
+  }
+
+  li {
+    display: inline-block;
+    margin-left: 20px;
+    transition: color 250ms;
+
+    i {
+      cursor: pointer;
+
+      &:hover {
+        color: #77b122;
+      }
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: #303030;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    padding: 0.3em 0.4em;
+    transition: color 250ms;
+
+    &:hover {
+      color: #77b122;
+    }
+  }
+}
+
+// HERO
+.heroBg {
+  background-image: url("img/1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  min-height: 800px;
+  position: relative;
+
+  .heroAlpha {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+  }
+
+  .heroText {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translateY(-50%);
+    max-width: 50%;
+    min-height: 330px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    h1 {
+      font-size: 3.1em;
+      margin-bottom: -10px;
+    }
+
+    .contactUsBtn {
+      background-color: #77b122;
+      color: #fff;
+      text-transform: uppercase;
+      border: none;
+      font-weight: 700;
+      padding: 1.1em 2.5em;
+      font-size: 14px;
+      align-self: flex-start;
+      cursor: pointer;
+      transition: background-color 500ms;
+
+      &:hover {
+        background-color: #000;
+      }
+    }
+  }
+}
+
+// MAIN
+main {
+  .ourStory {
+    padding: 6em 0;
+  }
+
+  .greenLandscape {
+    max-width: 100%;
+    border-radius: 5px;
+  }
+
+  .descriptionIcons {
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+      padding: 2em 2em 4em;
+    }
+
+    h3 {
+      color: #303030;
+      font-weight: 600;
+      margin-top: 10px;
+    }
+  }
+
+  // ABOUT US
+
+  .aboutUs {
+    display: flex;
+    padding-top: 3em;
+  }
+
+  .aboutUsLeft {
+    width: 70%;
+    padding-right: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    h1 {
+      color: #303030;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        display: block;
+        content: "About Us";
+        color: #707070;
+        text-transform: uppercase;
+        font-size: 0.4em;
+        letter-spacing: 1.5px;
+        top: -50%;
+      }
+
+      &::after {
+        position: absolute;
+        display: block;
+        content: url("img/decor.png");
+      }
+    }
+
+    span {
+      color: #77b122;
+    }
+
+    p {
+      color: #707070;
+      font-size: 0.9em;
+      font-weight: 600;
+    }
+
+    .readMoreBtn {
+      align-self: flex-start;
+    }
+
+    .readMoreBtn {
+      background-color: #77b122;
+      color: #fff;
+      text-transform: uppercase;
+      border: none;
+      font-weight: 700;
+      padding: 1.1em 2.5em;
+      font-size: 14px;
+      align-self: flex-start;
+      cursor: pointer;
+      transition: background-color 500ms;
+
+      &:hover {
+        background-color: #000;
+      }
+    }
+  }
+
+  .aboutUsRight {
+    width: 30%;
+    border-radius: 50%;
+    position: relative;
+
+    .aboutUsRightBg {
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.3);
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+
+    img:nth-child(2) {
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+    }
+
+    img:nth-child(3) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+    }
+  }
+}
+
+// WHAT WE DO
+.whatWeDo {
+  background-color: #f2f4f5;
+  background-image: url("img/grass.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+
+  .whatWeDoBg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 100, 0, 0.8);
+  }
+
+  .whatWeDoContent {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    min-height: 650px;
+    text-align: left;
+
+    h1 {
+      color: #fff;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        display: block;
+        content: "What We Do";
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 0.4em;
+        letter-spacing: 1.5px;
+        top: -50%;
+      }
+
+      &::after {
+        position: absolute;
+        display: block;
+        content: url("img/decor.png");
+      }
+    }
+
+    span {
+      color: #77b122;
+    }
+
+    p {
+      color: #f2f4f5;
+      font-size: 0.9em;
+      font-weight: 600;
+    }
+  }
+
+  .foodSections {
+    ul {
+      list-style-type: none;
+      display: flex;
+    }
+
+    li:hover h3 {
+      color: #77b122;
+    }
+
+    h3 {
+      color: #fff;
+      margin-bottom: 1em;
+      position: relative;
+      text-indent: 3em;
+      transition: color 250ms;
+    }
+
+    .one::before {
+      position: absolute;
+      display: inline-block;
+      content: url("img/s1.png");
+      left: -15%;
+    }
+
+    .two::before {
+      position: absolute;
+      display: inline-block;
+      content: url("img/s2.png");
+      left: -15%;
+    }
+
+    .three::before {
+      position: absolute;
+      display: inline-block;
+      content: url("img/s3.png");
+      left: -15%;
+      top: -15%;
+    }
+
+    .four::before {
+      position: absolute;
+      display: inline-block;
+      content: url("img/s4.png");
+      left: -15%;
+      top: -15%;
+    }
+  }
+}
+
+// FEATURED PRODUCTS
+.featuredProducts {
+  padding: 5em 0;
+
+  h1 {
+    color: #303030;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      display: block;
+      content: "Featured Products";
+      color: #707070;
+      text-transform: uppercase;
+      font-size: 0.4em;
+      letter-spacing: 1.5px;
+      top: -50%;
+    }
+
+    &::after {
+      position: absolute;
+      display: block;
+      content: url("img/decor.png");
+    }
+  }
+
+  span {
+    color: #77b122;
+  }
+
+  ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 6em;
+    text-align: center;
+
+    li:hover h4 {
+      color: #77b122;
+    }
+
+    span {
+      color: #707070;
+      font-size: 0.8em;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        display: inline-block;
+        content: "";
+        width: 100%;
+        height: 1px;
+        background-color: #707070;
+        top: 50%;
+      }
+    }
+
+    h4 {
+      color: #707070;
+      margin: 10px 0 5px;
+      transition: color 250ms;
+      cursor: pointer;
+    }
+
+    h5 {
+      font-size: 1em;
+    }
+  }
+
+  .goToStoreBtn {
+    background-color: #77b122;
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    font-weight: 700;
+    padding: 1.1em 2.5em;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 3em;
+    transition: background-color 500ms;
+
+    &:hover {
+      background-color: #000;
+    }
+  }
+}
+
+// SUBSCRIBE
+.subscribe {
+  background-image: url("img/8.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 530px;
+  color: #fff;
+  text-align: center;
+  position: relative;
+
+  .subscribeBg {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+  }
+
+  .subscribeContent {
+    position: relative;
+    min-height: 530px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  h1 {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      display: block;
+      content: "What We Do";
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 0.4em;
+      letter-spacing: 1.5px;
+      top: -60%;
+      left: 45%;
+    }
+
+    &::after {
+      position: absolute;
+      display: block;
+      content: url("img/decor2.png");
+      left: 40.5%;
+    }
+  }
+
+  p {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+
+.subscribeForm {
+  input {
+    padding: 1.7em;
+    border: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    font-size: 0.7em;
+  }
+
+  .subscribeBtn {
+    background-color: #77b122;
+    color: #fff;
+    text-transform: uppercase;
+    border: 1px solid #77b122;
+    font-weight: 700;
+    padding: 1.2em 2.5em;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 500ms, border 500ms;
+    margin-left: -5px;
+
+    &:hover {
+      background-color: #000;
+      border: 1px solid #000;
+    }
+  }
+}
+
+// FARMING PRACTICES
+.farmingPractices {
+  text-align: center;
+  padding: 5em 0;
+
+  h1 {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      display: block;
+      content: "Make The Green World";
+      color: #707070;
+      text-transform: uppercase;
+      font-size: 0.4em;
+      letter-spacing: 1.5px;
+      top: -60%;
+      left: 45%;
+    }
+
+    &::after {
+      position: absolute;
+      display: block;
+      content: url("img/decor2.png");
+      left: 40.5%;
+    }
+  }
+
+  span {
+    color: #77b122;
+  }
+
+  ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    margin-top: 100px;
+
+    li {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+
+      &:hover h2 {
+        color: #77b122;
+      }
+
+      &:hover h4::before {
+        position: absolute;
+        display: block;
+        content: url("img/chicken.png");
+        left: 40%;
+        top: -370%;
+        border-radius: 50%;
+        box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.15);
+        transition: box-shadow 250ms;
+      }
+    }
+
+    .farmingImg {
+      max-width: 100%;
+    }
+
+    h4 {
+      color: #707070;
+      font-weight: 600;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        display: block;
+        content: url("img/chicken.png");
+        left: 40%;
+        top: -370%;
+        border-radius: 50%;
+        box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.15);
+      }
+    }
+
+    h2 {
+      color: #303030;
+      transition: color 250ms;
+    }
+
+    p {
+      color: #707070;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+  }
+}
+
+// CUSTOMERS COMMENTS
+.customersComments {
+  background-image: url("img/15.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 400px;
+  position: relative;
+  color: #fff;
+
+  .customersCommentsBg {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+  }
+
+  .container {
+    position: relative;
+    min-height: 400px;
+    width: 65%;
+  }
+
+  .customer {
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+
+    h4 {
+      font-weight: 600;
+      line-height: 1.7;
+      position: relative;
+
+      &:first-child::before {
+        position: absolute;
+        display: block;
+        content: url("img/quote.png");
+        left: -5%;
+      }
+    }
+  }
+
+  .customerInfo {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    img {
+      border-radius: 50%;
+      border: 3px solid #77b122;
+    }
+  }
+}
+
+// CONTACT US
+.contactUs {
+  display: flex;
+  gap: 100px;
+  padding: 6em 0;
+  height: 700px;
+}
+
+.contactForm {
+  display: grid;
+  grid-gap: 40px;
+  grid-template-areas:
+    "h1 h1"
+    "namee email"
+    "subject subject"
+    "message message"
+    "btn btn";
+
+  h1 {
+    grid-area: h1;
+    position: relative;
+    margin-bottom: 30px;
+
+    &::before {
+      position: absolute;
+      display: block;
+      content: "Contact Now";
+      color: #707070;
+      text-transform: uppercase;
+      font-size: 0.4em;
+      letter-spacing: 1.5px;
+      top: -30%;
+    }
+
+    &::after {
+      position: absolute;
+      display: block;
+      content: url("img/decor.png");
+    }
+
+    span {
+      color: #77b122;
+    }
+  }
+
+  input:nth-child(2) {
+    grid-area: namee;
+    padding: 0.8em;
+  }
+
+  input:nth-child(3) {
+    grid-area: email;
+    padding: 0.8em;
+  }
+
+  input:nth-child(4) {
+    grid-area: subject;
+    padding: 0.8em;
+  }
+
+  textarea {
+    grid-area: message;
+    padding: 0.8em;
+    resize: vertical;
+    max-height: 200px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+      "Helvetica Neue", sans-serif;
+  }
+
+  .sendMessageBtn {
+    grid-area: btn;
+    background-color: #77b122;
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    font-weight: 700;
+    padding: 1.2em 2.5em;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 500ms, border 500ms;
+    margin-left: -5px;
+
+    &:hover {
+      background-color: #000;
+    }
+  }
+}
+
+// FOOTER
+footer {
+  background-image: url("img/vineyard.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+
+  .container {
+    position: relative;
+  }
+}
+
+.footerBg {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+}
+
+.footerContent {
+  display: flex;
+  align-items: center;
+  color: #fff;
+
+  a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 250ms;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  .div1 {
+    width: 33.33%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+    padding: 7em 2em 7em 0;
+
+    i {
+      color: #77b122;
+    }
+  }
+
+  .div2 {
+    width: 33.33%;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding-left: 5em;
+  }
+
+  .div3 {
+    width: 33.33%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 35px;
+  }
+
+  .figure {
+    display: flex;
+
+    img {
+      max-width: 80px;
+    }
+
+    a {
+      align-self: center;
+      margin-left: 15px;
+    }
+  }
+}
+
+.copyright {
+  background-color: #0a0a0a;
+  padding: 1em 0;
+}
+
+.copyrightContent {
+  display: flex;
+  justify-content: space-between;
+
+  p {
+    color: #707070;
+    font-size: 0.9em;
+  }
+
+  ul {
+    list-style-type: none;
+
+    li {
+      display: inline-block;
+    }
+  }
+
+  a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 250ms;
+    font-size: 0.9em;
+    margin: 0 0.5em;
+
+    &:hover {
+      color: #77b122;
+    }
+  }
+}
