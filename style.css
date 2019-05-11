@@ -363,6 +363,9 @@ main .aboutUsRight img:nth-child(3) {
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+  opacity: 0;
+  -webkit-transition: opacity 1.5s;
+  transition: opacity 1.5s;
 }
 
 .whatWeDo .whatWeDoBg {
