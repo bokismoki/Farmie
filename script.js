@@ -1,3 +1,7 @@
+function scrollToTheTop() {
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
+}
+
 function changeOpacity() {
 
     const whatWeDo = document.querySelector(".whatWeDo");
@@ -14,4 +18,4 @@ function changeOpacity() {
 
 }
 
-document.addEventListener("load", changeOpacity());
+document.addEventListener("load", changeOpacity(), scrollToTheTop());
