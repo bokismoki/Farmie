@@ -9,13 +9,13 @@ function changeOpacity() {
     document.addEventListener("scroll", e => {
 
         console.log(e.pageY);
-    
-        if(e.pageY >= 1550) {
+
+        if (e.pageY >= 1550) {
             whatWeDo.style.opacity = 1;
         }
-    
+
     });
 
 }
 
-document.addEventListener("load", changeOpacity(), scrollToTheTop());
+document.addEventListener("load", scrollToTheTop(), changeOpacity());
